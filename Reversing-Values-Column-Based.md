@@ -153,9 +153,47 @@ You can paste in screenshots or markdown tables from earlier like:
 
 ---
 
-### ✅ **Key Takeaways**
+### **Key Takeaways**
 - Use ROW_NUMBER to anchor order within a group.
 - Self-join on row_number to assign values from a reversed order.
 - Understand the difference between sorting rows and reassigning values.
+
+--- 
+
+##  **Practice Problem Statement: Reassigning Employee Levels**
+
+### Task:
+
+> For each department, reassign the `EmpID` values such that the employee with the **lowest original `EmpID`** receives the **highest available `EmpID`** *within that same department*, and so on.
+
+###  Table: `employees`
+
+| EmpID | Name    | Department  |
+| ----- | ------- | ----------- |
+| 101   | Alice   | Engineering |
+| 102   | Bob     | Engineering |
+| 103   | Charlie | Engineering |
+| 201   | Diana   | HR          |
+| 202   | Ethan   | HR          |
+| 301   | Frank   | Sales       |
+| 302   | Grace   | Sales       |
+| 303   | Helen   | Sales       |
+| 304   | Ian     | Sales       |
+
+---
+
+
+
+###  Expected Output (for example):
+
+| Original\_EmpID | Name    | Department  | New\_EmpID |
+| --------------- | ------- | ----------- | ---------- |
+| 101             | Alice   | Engineering | 103        |
+| 102             | Bob     | Engineering | 102        |
+| 103             | Charlie | Engineering | 101        |
+| ...             | ...     | ...         | ...        |
+
+---
+
 
 
